@@ -779,7 +779,7 @@ call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
 
 " Telescope
 " > nvim-telescope/telescope.nvim
-call s:hi("TelescopeMatching", s:nord8_gui, "", s:nord8_term, s:bold, "")
+call s:hi("TelescopeMatching", s:nord8_gui, "", s:nord8_term, "", s:bold, "")
 
 " Treesitter
 if has('nvim')
