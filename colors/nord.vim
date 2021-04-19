@@ -781,6 +781,20 @@ call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
 " > nvim-telescope/telescope.nvim
 call s:hi("TelescopeMatching", s:nord8_gui, "", s:nord8_term, "", s:bold, "")
 
+" Gitsigns
+" > lewis6991/gitsigns.nvim
+call s:hi("GitSignsAdd", s:nord14_gui, "", s:nord14_term, "", "", "")
+call s:hi("GitSignsChange", s:nord13_gui, "", s:nord13_term, "", "", "")
+call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddNr", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeNr", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteNr", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddLn", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeLn", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteLn", s:nord11_gui, "", s:nord13_term, "", "", "")
+
 " Treesitter
 if has('nvim')
     if exists('g:loaded_nvim_treesitter')
