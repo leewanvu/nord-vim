@@ -847,5 +847,6 @@ if has('nvim')
         call s:hi("TSURI", s:nord4_gui, 226, "", "", "", "")
         call s:hi("TSTag", s:nord9_gui, 109, "", "", "", "")
         call s:hi("TSTagDelimiter", s:nord3_gui, 241, "", "", "", "")
+        call s:hi("TSComment", s:nord3_gui_bright, "", s:nord3_term, "", s:italicize_comments, "")
     endif
 endif
