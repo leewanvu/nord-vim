@@ -796,8 +796,8 @@ call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
 " call s:hi("GitSignsDeleteLn", s:nord11_gui, "", s:nord13_term, "", "", "")
 
 " Treesitter
-if has('nvim')
-    if exists('g:loaded_nvim_treesitter')
+" if has('nvim')
+"     if exists('g:loaded_nvim_treesitter')
         call s:hi("TSError", s:nord11_gui, 131, "", "", "underline", "underline")
         call s:hi("TSPunctDelimiter", s:nord9_gui, 109, "", "", "", "")
         call s:hi("TSPunctBracket", s:nord6_gui,255, "", "", "", "")
@@ -848,5 +848,5 @@ if has('nvim')
         call s:hi("TSTag", s:nord9_gui, 109, "", "", "", "")
         call s:hi("TSTagDelimiter", s:nord3_gui, 241, "", "", "", "")
         call s:hi("TSComment", s:nord3_gui_bright, "", s:nord3_term, "", s:italicize_comments, "")
-    endif
-endif
+"     endif
+" endif
