@@ -850,3 +850,17 @@ call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
         call s:hi("TSComment", s:nord3_gui_bright, "", s:nord3_term, "", s:italicize_comments, "")
 "     endif
 " endif
+
+"+------------+
+"+ Public API +
+"+------------+
+"+--- Functions ---+
+
+function! NordPalette() abort
+  let ret = {}
+  for color in range(16)
+    execute 'let ret["nord'.color.'"] = s:nord'.color.'_gui'
+  endfor
+  let ret["nord3_bright"] = s:nord3_gui_bright
+  return ret
+endfunction
