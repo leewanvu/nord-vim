@@ -781,9 +781,23 @@ call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
 " > nvim-telescope/telescope.nvim
 call s:hi("TelescopeMatching", s:nord8_gui, "", s:nord8_term, "", s:bold, "")
 
+" Gitsigns
+" > lewis6991/gitsigns.nvim
+call s:hi("GitSignsAdd", s:nord14_gui, "", s:nord14_term, "", "", "")
+call s:hi("GitSignsChange", s:nord13_gui, "", s:nord13_term, "", "", "")
+call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddNr", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeNr", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteNr", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddLn", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeLn", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteLn", s:nord11_gui, "", s:nord13_term, "", "", "")
+
 " Treesitter
-if has('nvim')
-    if exists('g:loaded_nvim_treesitter')
+" if has('nvim')
+"     if exists('g:loaded_nvim_treesitter')
         call s:hi("TSError", s:nord11_gui, 131, "", "", "underline", "underline")
         call s:hi("TSPunctDelimiter", s:nord9_gui, 109, "", "", "", "")
         call s:hi("TSPunctBracket", s:nord6_gui,255, "", "", "", "")
@@ -811,7 +825,7 @@ if has('nvim')
         call s:hi("TSProperty", s:nord9_gui, 109, "", "", "", "")
         call s:hi("TSConstructor", s:nord7_gui, 109, "", "", "", "")
         call s:hi("TSConditional", s:nord9_gui, 109, "", "", "", "")
-        call s:hi("TSRepeat", s:nord15_gui, 139, "", "", "", "")
+        call s:hi("TSRepeat", s:nord9_gui, 139, "", "", "", "")
         call s:hi("TSLabel", s:nord8_gui, 110, "", "", "", "")
         call s:hi("TSKeyword", s:nord9_gui, 109, "", "", "", "")
         call s:hi("TSKeywordFunction", s:nord9_gui, 109, "", "", "", "")
@@ -833,8 +847,9 @@ if has('nvim')
         call s:hi("TSURI", s:nord4_gui, 226, "", "", "", "")
         call s:hi("TSTag", s:nord9_gui, 109, "", "", "", "")
         call s:hi("TSTagDelimiter", s:nord3_gui, 241, "", "", "", "")
-    endif
-endif
+        call s:hi("TSComment", s:nord3_gui_bright, "", s:nord3_term, "", s:italicize_comments, "")
+"     endif
+" endif
 
 "+------------+
 "+ Public API +
