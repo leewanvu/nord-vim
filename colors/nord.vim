@@ -835,3 +835,17 @@ if has('nvim')
         call s:hi("TSTagDelimiter", s:nord3_gui, 241, "", "", "", "")
     endif
 endif
+
+"+------------+
+"+ Public API +
+"+------------+
+"+--- Functions ---+
+
+function! NordPalette() abort
+  let ret = {}
+  for color in range(16)
+    execute 'let ret["nord'.color.'"] = s:nord'.color.'_gui'
+  endfor
+  let ret["nord3_bright"] = s:nord3_gui_bright
+  return ret
+endfunction
