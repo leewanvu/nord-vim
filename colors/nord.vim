@@ -814,7 +814,7 @@ call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
 " Whichkey
 " > folke/which-key.nvim
 call s:hi("WhichKey", s:nord8_gui, "", s:nord8_term, "", "", "")
-call s:hi("WhichKeyGroup", s:nord9_gui, "", s:nord9_term, "", "", "")
+call s:hi("WhichKeyGroup", s:nord7_gui, "", s:nord7_term, "", "", "")
 call s:hi("WhichKeySeparator", s:nord3_gui_bright, "", s:nord3_term, "", "", "")
 call s:hi("WhichKeyDesc", s:nord4_gui, "", "", "", "", "")
 " call s:hi("WhichKeyFloat", s:nord4_gui, "", "", "", "", "")
