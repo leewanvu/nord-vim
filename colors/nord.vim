@@ -811,7 +811,15 @@ call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
 " call s:hi("GitSignsChangeLn", s:nord13_gui, "", s:nord13_term, "", "", "")
 " call s:hi("GitSignsDeleteLn", s:nord11_gui, "", s:nord13_term, "", "", "")
 
-" hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)
+" Whichkey
+" > folke/which-key.nvim
+call s:hi("WhichKey", s:nord8_gui, "", s:nord8_term, "", "", "")
+call s:hi("WhichKeyGroup", s:nord7_gui, "", s:nord7_term, "", "", "")
+call s:hi("WhichKeySeparator", s:nord3_gui_bright, "", s:nord3_term, "", "", "")
+call s:hi("WhichKeyDesc", s:nord4_gui, "", "", "", "", "")
+" call s:hi("WhichKeyFloat", s:nord4_gui, "", "", "", "", "")
+call s:hi("WhichKeyValue", s:nord4_gui, "", "", "", "", "")
+
 " Treesitter
 call s:hi("TSError", s:nord11_gui, 131, "", "", "underline", "underline")
 call s:hi("TSPunctDelimiter", s:nord9_gui, 109, "", "", "", "")
