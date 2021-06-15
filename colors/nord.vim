@@ -13,7 +13,7 @@ if version > 580
 endif
 
 let g:colors_name = "nord"
-let s:nord_vim_version="0.15.0"
+let s:nord_vim_version="0.16.0"
 set background=dark
 
 let s:nord0_gui = "#2E3440"
@@ -177,11 +177,13 @@ call s:hi("iCursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
 call s:hi("LineNr", s:nord3_gui, "NONE", s:nord3_term, "NONE", "", "")
 call s:hi("MatchParen", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "", "")
 call s:hi("NonText", s:nord2_gui, "", s:nord3_term, "", "", "")
+
 if g:nord_transparent == 1
   call s:hi("Normal", s:nord4_gui, "NONE", "NONE", "NONE", "", "")
 else
   call s:hi("Normal", s:nord4_gui, s:nord0_gui, "NONE", "NONE", "", "")
 endif
+
 call s:hi("Pmenu", s:nord4_gui, s:nord2_gui, "NONE", s:nord1_term, "NONE", "")
 call s:hi("PmenuSbar", s:nord4_gui, s:nord2_gui, "NONE", s:nord1_term, "", "")
 call s:hi("PmenuSel", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "", "")
@@ -290,6 +292,7 @@ endif
 call s:hi("Boolean", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Character", s:nord14_gui, "", s:nord14_term, "", "", "")
 call s:hi("Comment", s:nord3_gui_bright, "", s:nord3_term, "", s:italicize_comments, "")
+call s:hi("Conceal", "", "NONE", "", "NONE", "", "")
 call s:hi("Conditional", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("Constant", s:nord4_gui, "", "NONE", "", "", "")
 call s:hi("Define", s:nord9_gui, "", s:nord9_term, "", "", "")
@@ -485,12 +488,9 @@ hi! link markdownHeadingDelimiter Keyword
 call s:hi("perlPackageDecl", s:nord7_gui, "", s:nord7_term, "", "", "")
 
 call s:hi("phpClasses", s:nord7_gui, "", s:nord7_term, "", "", "")
-call s:hi("phpClass", s:nord7_gui, "", s:nord7_term, "", "", "")
 call s:hi("phpDocTags", s:nord7_gui, "", s:nord7_term, "", "", "")
 hi! link phpDocCustomTags phpDocTags
 hi! link phpMemberSelector Keyword
-hi! link phpMethod Function
-hi! link phpFunction Function
 
 call s:hi("podCmdText", s:nord7_gui, "", s:nord7_term, "", "", "")
 call s:hi("podVerbatimLine", s:nord4_gui, "", "NONE", "", "", "")
@@ -769,6 +769,15 @@ hi! link mkdLinkDef mkdLink
 hi! link mkdLinkDefTarget mkdURL
 hi! link mkdLinkTitle mkdInlineURL
 hi! link mkdDelimiter Keyword
+
+" PHP
+" > StanAngeloff/php.vim
+call s:hi("phpClass", s:nord7_gui, "", s:nord7_term, "", "", "")
+call s:hi("phpClassImplements", s:nord7_gui, "", s:nord7_term, "", s:bold, "")
+hi! link phpClassExtends phpClass
+hi! link phpFunction Function
+hi! link phpMethod Function
+hi! link phpUseClass phpClass
 
 " Vimwiki
 " > vimwiki/vimwiki
