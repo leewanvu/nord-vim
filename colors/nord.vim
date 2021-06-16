@@ -571,6 +571,13 @@ hi! link yamlDocumentStart Keyword
 "+ Plugin Support +
 "+----------------+
 "+--- UI ---+
+" Treesitter
+" > nvim-treesitter/nvim-treesitter
+" php
+call s:hi("phpTSConstructor", s:nord7_gui, "", s:nord7_term, "", "", "")
+call s:hi("phpTSVariable", s:nord4_gui, "", s:nord4_term, "", "", "")
+call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
+
 " ALE
 " > w0rp/ale
 call s:hi("ALEWarningSign", s:nord13_gui, "", s:nord13_term, "", "", "")
@@ -687,6 +694,33 @@ hi! link StartifyBracket Delimiter
 hi! link StartifySlash Normal
 hi! link StartifySpecial Comment
 
+" Telescope
+" > nvim-telescope/telescope.nvim
+call s:hi("TelescopeMatching", s:nord8_gui, "", s:nord8_term, "", s:bold, "")
+
+" Gitsigns
+" > lewis6991/gitsigns.nvim
+call s:hi("GitSignsAdd", s:nord14_gui, "", s:nord14_term, "", "", "")
+call s:hi("GitSignsChange", s:nord13_gui, "", s:nord13_term, "", "", "")
+call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddNr", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeNr", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteNr", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddLn", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeLn", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteLn", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" Whichkey
+" > folke/which-key.nvim
+call s:hi("WhichKey", s:nord8_gui, "", s:nord8_term, "", "", "")
+call s:hi("WhichKeyGroup", s:nord7_gui, "", s:nord7_term, "", "", "")
+call s:hi("WhichKeySeparator", s:nord3_gui_bright, "", s:nord3_term, "", "", "")
+call s:hi("WhichKeyDesc", s:nord4_gui, "", "", "", "", "")
+" call s:hi("WhichKeyFloat", s:nord4_gui, "", "", "", "", "")
+call s:hi("WhichKeyValue", s:nord4_gui, "", "", "", "", "")
+
 "+--- Languages ---+
 " Haskell
 " > neovimhaskell/haskell-vim
@@ -801,33 +835,6 @@ hi! link VimwikiList markdownListMarker
 " YAML
 " > stephpy/vim-yaml
 call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
-
-" Telescope
-" > nvim-telescope/telescope.nvim
-call s:hi("TelescopeMatching", s:nord8_gui, "", s:nord8_term, "", s:bold, "")
-
-" Gitsigns
-" > lewis6991/gitsigns.nvim
-call s:hi("GitSignsAdd", s:nord14_gui, "", s:nord14_term, "", "", "")
-call s:hi("GitSignsChange", s:nord13_gui, "", s:nord13_term, "", "", "")
-call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
-
-" call s:hi("GitSignsAddNr", s:nord14_gui, "", s:nord14_term, "", "", "")
-" call s:hi("GitSignsChangeNr", s:nord13_gui, "", s:nord13_term, "", "", "")
-" call s:hi("GitSignsDeleteNr", s:nord11_gui, "", s:nord13_term, "", "", "")
-
-" call s:hi("GitSignsAddLn", s:nord14_gui, "", s:nord14_term, "", "", "")
-" call s:hi("GitSignsChangeLn", s:nord13_gui, "", s:nord13_term, "", "", "")
-" call s:hi("GitSignsDeleteLn", s:nord11_gui, "", s:nord13_term, "", "", "")
-
-" Whichkey
-" > folke/which-key.nvim
-call s:hi("WhichKey", s:nord8_gui, "", s:nord8_term, "", "", "")
-call s:hi("WhichKeyGroup", s:nord7_gui, "", s:nord7_term, "", "", "")
-call s:hi("WhichKeySeparator", s:nord3_gui_bright, "", s:nord3_term, "", "", "")
-call s:hi("WhichKeyDesc", s:nord4_gui, "", "", "", "", "")
-" call s:hi("WhichKeyFloat", s:nord4_gui, "", "", "", "", "")
-call s:hi("WhichKeyValue", s:nord4_gui, "", "", "", "", "")
 
 "+------------+
 "+ Public API +
