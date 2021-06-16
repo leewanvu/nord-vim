@@ -579,8 +579,8 @@ call s:hi("TSPunctDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("phpTSConstructor", s:nord7_gui, "", s:nord7_term, "", "", "")
 call s:hi("phpTSVariable", s:nord4_gui, "", "", "", "", "")
 call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
-call s:hi("phpTSFunction", s:nord9_gui, "", s:nord9_term, "", "", "")
-call s:hi("phpTSMethod", s:nord8_gui, "", s:nord8_term, "", "", "")
+" call s:hi("phpTSFunction", s:nord9_gui, "", s:nord9_term, "", "", "")
+" call s:hi("phpTSMethod", s:nord8_gui, "", s:nord8_term, "", "", "")
 
 " ALE
 " > w0rp/ale
