@@ -573,12 +573,14 @@ hi! link yamlDocumentStart Keyword
 "+--- UI ---+
 " Treesitter
 " > nvim-treesitter/nvim-treesitter
-call s:hi("tsConstant", s:nord8_gui, "", s:nord8_term, "", "", "")
+call s:hi("TSConstant", s:nord8_gui, "", s:nord8_term, "", "", "")
+call s:hi("TSPunctDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
 " php
 call s:hi("phpTSConstructor", s:nord7_gui, "", s:nord7_term, "", "", "")
 call s:hi("phpTSVariable", s:nord4_gui, "", "", "", "", "")
 call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
 call s:hi("phpTSFunction", s:nord8_gui, "", s:nord8_term, "", "", "")
+call s:hi("phpTSMethod", s:nord9_gui, "", s:nord9_term, "", "", "")
 
 " ALE
 " > w0rp/ale
