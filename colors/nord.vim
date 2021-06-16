@@ -575,7 +575,7 @@ hi! link yamlDocumentStart Keyword
 " > nvim-treesitter/nvim-treesitter
 " php
 call s:hi("phpTSConstructor", s:nord7_gui, "", s:nord7_term, "", "", "")
-call s:hi("phpTSVariable", s:nord4_gui, "", s:nord4_term, "", "", "")
+call s:hi("phpTSVariable", s:nord4_gui, "", "", "", "", "")
 call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
 
 " ALE
