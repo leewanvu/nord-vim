@@ -583,9 +583,11 @@ call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
 " call s:hi("phpTSFunction", s:nord9_gui, "", s:nord9_term, "", "", "")
 " call s:hi("phpTSMethod", s:nord8_gui, "", s:nord8_term, "", "", "")
 " html
-call s:hi("htmlTSProperty", s:nord9_gui, "", s:nord9_term, "", "", "")
+call s:hi("htmlTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
+call s:hi("htmlTSTag", s:nord9_gui, "", s:nord9_term, "", s:bold, "")
+call s:hi("htmlTSTagDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
 " vue
-call s:hi("vueTSProperty", s:nord9_gui, "", s:nord9_term, "", "", "")
+call s:hi("vueTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
 
 " ALE
 " > w0rp/ale
