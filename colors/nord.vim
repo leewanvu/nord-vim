@@ -427,12 +427,13 @@ call s:hi("htmlLink", s:nord4_gui, "", "", "", "NONE", "NONE")
 hi! link htmlBold Bold
 hi! link htmlEndTag htmlTag
 hi! link htmlItalic Italic
-hi! link htmlH1 markdownH1
-hi! link htmlH2 markdownH1
-hi! link htmlH3 markdownH1
-hi! link htmlH4 markdownH1
-hi! link htmlH5 markdownH1
-hi! link htmlH6 markdownH1
+call s:hi("htmlH1", s:nord4_gui, "", "", "", "NONE", "NONE")
+" hi! link htmlH1 markdownH1
+hi! link htmlH2 htmlH1
+hi! link htmlH3 htmlH1
+hi! link htmlH4 htmlH1
+hi! link htmlH5 htmlH1
+hi! link htmlH6 htmlH1
 hi! link htmlSpecialChar SpecialChar
 hi! link htmlTag Keyword
 hi! link htmlTagN htmlTag
