@@ -794,7 +794,7 @@ if has("nvim")
   hi! link vueTSProperty Keyword
 
   " comment
-  hi! link commentTSConstant Function
+  hi! link commentTSConstant Keyword
 endif
 
 " TypeScript
