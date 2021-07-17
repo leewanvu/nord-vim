@@ -897,6 +897,7 @@ call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
 " NvimTree
 " > kyazdani42/nvim-tree.lua
 hi! link NvimTreeIndentMarker LineNr
+call s:hi("NvimTreeWindowPicker", s:nord3_gui, s:nord7_gui, s:nord3_term, s:nord7_term, "", s:bold, "")
 
 "+------------+
 "+ Public API +
