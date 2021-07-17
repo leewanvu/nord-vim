@@ -778,21 +778,20 @@ if has("nvim")
   hi! link TSUnderline Underline
   hi! link TSVariable Variable
   hi! link TSVariableBuiltin Keyword
-  " call s:hi("TSConstant", s:nord8_gui, "", s:nord8_term, "", "", "")
-  " call s:hi("TSPunctDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
+
   " php
-  " call s:hi("phpTSConstructor", s:nord7_gui, "", s:nord7_term, "", "", "")
-  " call s:hi("phpTSProperty", s:nord4_gui, "", "", "", "", "")
-  " call s:hi("phpTSVariable", s:nord4_gui, "", "", "", "", "")
-  " call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
+  hi! link phpTSConstructor phpClass
+
   " html
-  " call s:hi("htmlTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
-  " call s:hi("htmlTSTag", s:nord9_gui, "", s:nord9_term, "", s:bold, "")
-  " call s:hi("htmlTSTagDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
+  hi! link htmlTSProperty htmlArg
+  hi! link htmlTSTag htmlTag
+  hi! link htmlTSTagDelimiter htmlTag
+
   " css
   hi! link cssTSProperty cssDefinition
+
   " vue
-  " call s:hi("vueTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
+  hi! link vueTSProperty Keyword
 
 endif
 
