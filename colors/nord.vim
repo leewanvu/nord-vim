@@ -575,24 +575,6 @@ hi! link yamlDocumentStart Keyword
 "+ Plugin Support +
 "+----------------+
 "+--- UI ---+
-" Treesitter
-" > nvim-treesitter/nvim-treesitter
-call s:hi("TSConstant", s:nord8_gui, "", s:nord8_term, "", "", "")
-call s:hi("TSPunctDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
-" php
-call s:hi("phpTSConstructor", s:nord7_gui, "", s:nord7_term, "", "", "")
-call s:hi("phpTSProperty", s:nord4_gui, "", "", "", "", "")
-call s:hi("phpTSVariable", s:nord4_gui, "", "", "", "", "")
-call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
-" html
-call s:hi("htmlTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
-call s:hi("htmlTSTag", s:nord9_gui, "", s:nord9_term, "", s:bold, "")
-call s:hi("htmlTSTagDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
-" css
-hi! link cssTSProperty cssDefinition
-" vue
-call s:hi("vueTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
-
 " ALE
 " > w0rp/ale
 call s:hi("ALEWarningSign", s:nord13_gui, "", s:nord13_term, "", "", "")
@@ -796,6 +778,22 @@ if has("nvim")
   hi! link TSUnderline Underline
   hi! link TSVariable Variable
   hi! link TSVariableBuiltin Keyword
+  " call s:hi("TSConstant", s:nord8_gui, "", s:nord8_term, "", "", "")
+  " call s:hi("TSPunctDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
+  " php
+  " call s:hi("phpTSConstructor", s:nord7_gui, "", s:nord7_term, "", "", "")
+  " call s:hi("phpTSProperty", s:nord4_gui, "", "", "", "", "")
+  " call s:hi("phpTSVariable", s:nord4_gui, "", "", "", "", "")
+  " call s:hi("phpTSVariableBuiltin", s:nord9_gui, "", s:nord9_term, "", "", "")
+  " html
+  " call s:hi("htmlTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
+  " call s:hi("htmlTSTag", s:nord9_gui, "", s:nord9_term, "", s:bold, "")
+  " call s:hi("htmlTSTagDelimiter", s:nord9_gui, "", s:nord9_term, "", "", "")
+  " css
+  hi! link cssTSProperty cssDefinition
+  " vue
+  " call s:hi("vueTSProperty", s:nord7_gui, "", s:nord7_term, "", "", "")
+
 endif
 
 " TypeScript
@@ -894,6 +892,10 @@ hi! link VimwikiList markdownListMarker
 " YAML
 " > stephpy/vim-yaml
 call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
+
+" NvimTree
+" > kyazdani42/nvim-tree.lua
+hi! link NvimTreeIndentMarker LineNr
 
 "+------------+
 "+ Public API +
