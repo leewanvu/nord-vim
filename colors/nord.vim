@@ -72,10 +72,6 @@ let s:nord3_gui_brightened = [
   \ "#7b88a1",
 \ ]
 
-if !exists("g:nord_transparent")
-  let g:nord_transparent = 0
-endif
-
 if !exists("g:nord_bold")
   let g:nord_bold = 1
 endif
@@ -177,13 +173,7 @@ call s:hi("iCursor", s:nord0_gui, s:nord4_gui, "", "NONE", "", "")
 call s:hi("LineNr", s:nord3_gui, "NONE", s:nord3_term, "NONE", "", "")
 call s:hi("MatchParen", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "", "")
 call s:hi("NonText", s:nord2_gui, "", s:nord3_term, "", "", "")
-
-if g:nord_transparent == 1
-  call s:hi("Normal", s:nord4_gui, "NONE", "NONE", "NONE", "", "")
-else
-  call s:hi("Normal", s:nord4_gui, s:nord0_gui, "NONE", "NONE", "", "")
-endif
-
+call s:hi("Normal", s:nord4_gui, s:nord0_gui, "NONE", "NONE", "", "")
 call s:hi("Pmenu", s:nord4_gui, s:nord2_gui, "NONE", s:nord1_term, "NONE", "")
 call s:hi("PmenuSbar", s:nord4_gui, s:nord2_gui, "NONE", s:nord1_term, "", "")
 call s:hi("PmenuSel", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "", "")
@@ -226,6 +216,21 @@ if has('nvim')
   let g:terminal_color_15 = s:nord6_gui
 endif
 
+"+- Neovim Diagnostics API -+
+call s:hi("DiagnosticWarn", s:nord13_gui, "", s:nord13_term, "", "", "")
+call s:hi("DiagnosticError" , s:nord11_gui, "", s:nord11_term, "", "", "")
+call s:hi("DiagnosticInfo" , s:nord8_gui, "", s:nord8_term, "", "", "")
+call s:hi("DiagnosticHint" , s:nord10_gui, "", s:nord10_term, "", "", "")
+call s:hi("DiagnosticUnderlineWarn" , s:nord13_gui, "", s:nord13_term, "", "undercurl", "")
+call s:hi("DiagnosticUnderlineError" , s:nord11_gui, "", s:nord11_term, "", "undercurl", "")
+call s:hi("DiagnosticUnderlineInfo" , s:nord8_gui, "", s:nord8_term, "", "undercurl", "")
+call s:hi("DiagnosticUnderlineHint" , s:nord10_gui, "", s:nord10_term, "", "undercurl", "")
+
+"+- Neovim DocumentHighlight -+
+call s:hi("LspReferenceText", "", s:nord3_gui, "", s:nord3_term, "", "")
+call s:hi("LspReferenceRead", "", s:nord3_gui, "", s:nord3_term, "", "")
+call s:hi("LspReferenceWrite", "", s:nord3_gui, "", s:nord3_term, "", "")
+
 "+--- Gutter ---+
 call s:hi("CursorColumn", "", s:nord1_gui, "NONE", s:nord1_term, "", "")
 if g:nord_cursor_line_number_background == 0
@@ -235,11 +240,7 @@ else
 endif
 call s:hi("Folded", s:nord3_gui, s:nord1_gui, s:nord3_term, s:nord1_term, s:bold, "")
 call s:hi("FoldColumn", s:nord3_gui, s:nord0_gui, s:nord3_term, "NONE", "", "")
-if g:nord_transparent == 1
-  call s:hi("SignColumn", s:nord1_gui, "NONE", s:nord1_term, "NONE", "", "")
-else
-  call s:hi("SignColumn", s:nord1_gui, s:nord0_gui, s:nord1_term, "NONE", "", "")
-endif
+call s:hi("SignColumn", s:nord1_gui, s:nord0_gui, s:nord1_term, "NONE", "", "")
 
 "+--- Navigation ---+
 call s:hi("Directory", s:nord8_gui, "", s:nord8_term, "NONE", "", "")
@@ -276,14 +277,10 @@ call s:hi("TabLineSel", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, "N
 "+--- Window ---+
 call s:hi("Title", s:nord4_gui, "", "NONE", "", "NONE", "")
 
-if g:nord_transparent == 1
-  call s:hi("VertSplit", s:nord2_gui, "NONE", s:nord3_term, "NONE", "NONE", "")
+if g:nord_bold_vertical_split_line == 0
+  call s:hi("VertSplit", s:nord2_gui, s:nord0_gui, s:nord3_term, "NONE", "NONE", "")
 else
-  if g:nord_bold_vertical_split_line == 0
-      call s:hi("VertSplit", s:nord2_gui, s:nord0_gui, s:nord3_term, "NONE", "NONE", "")
-  else
-    call s:hi("VertSplit", s:nord2_gui, s:nord1_gui, s:nord3_term, s:nord1_term, "NONE", "")
-  endif
+  call s:hi("VertSplit", s:nord2_gui, s:nord1_gui, s:nord3_term, s:nord1_term, "NONE", "")
 endif
 
 "+----------------------+
@@ -594,17 +591,16 @@ call s:hi("CocHintSign" , s:nord10_gui, "", s:nord10_term, "", "", "")
 " Neovim LSP
 " > neovim/nvim-lspconfig
 call s:hi("LspCodeLens", s:nord3_gui_bright, "", s:nord3_term, "", "", "")
-call s:hi("LspDiagnosticsDefaultWarning", s:nord13_gui, "", s:nord13_term, "", "", "")
-call s:hi("LspDiagnosticsDefaultError", s:nord11_gui, "", s:nord11_term, "", "", "")
-call s:hi("LspDiagnosticsDefaultInformation" , s:nord8_gui, "", s:nord8_term, "", "", "")
-call s:hi("LspDiagnosticsDefaultHint", s:nord10_gui, "", s:nord10_term, "", "", "")
-call s:hi("LspDiagnosticsUnderlineWarning", s:nord13_gui, "", s:nord13_term, "", "undercurl", "")
-call s:hi("LspDiagnosticsUnderlineError", s:nord11_gui, "", s:nord11_term, "", "undercurl", "")
-call s:hi("LspDiagnosticsUnderlineInformation", s:nord8_gui, "", s:nord8_term, "", "undercurl", "")
-call s:hi("LspDiagnosticsUnderlineHint", s:nord10_gui, "", s:nord10_term, "", "undercurl", "")
-call s:hi("LspReferenceRead", "", s:nord2_gui, "", "", "", "")
-hi! link LspReferenceText LspReferenceRead
-hi! link LspReferenceWrite LspReferenceRead
+if has("nvim-0.5")
+  call s:hi("LspDiagnosticsDefaultWarning", s:nord13_gui, "", s:nord13_term, "", "", "")
+  call s:hi("LspDiagnosticsDefaultError" , s:nord11_gui, "", s:nord11_term, "", "", "")
+  call s:hi("LspDiagnosticsDefaultInformation" , s:nord8_gui, "", s:nord8_term, "", "", "")
+  call s:hi("LspDiagnosticsDefaultHint" , s:nord10_gui, "", s:nord10_term, "", "", "")
+  call s:hi("LspDiagnosticsUnderlineWarning" , s:nord13_gui, "", s:nord13_term, "", "undercurl", "")
+  call s:hi("LspDiagnosticsUnderlineError" , s:nord11_gui, "", s:nord11_term, "", "undercurl", "")
+  call s:hi("LspDiagnosticsUnderlineInformation" , s:nord8_gui, "", s:nord8_term, "", "undercurl", "")
+  call s:hi("LspDiagnosticsUnderlineHint" , s:nord10_gui, "", s:nord10_term, "", "undercurl", "")
+endif
 
 " GitGutter
 " > airblade/vim-gitgutter
