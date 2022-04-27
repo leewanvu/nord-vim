@@ -399,12 +399,13 @@ call s:hi("htmlLink", s:nord4_gui, "", "", "", "NONE", "NONE")
 hi! link htmlBold Bold
 hi! link htmlEndTag htmlTag
 hi! link htmlItalic Italic
-hi! link htmlH1 markdownH1
-hi! link htmlH2 markdownH1
-hi! link htmlH3 markdownH1
-hi! link htmlH4 markdownH1
-hi! link htmlH5 markdownH1
-hi! link htmlH6 markdownH1
+call s:hi("htmlH1", s:nord4_gui, "", "", "", "NONE", "NONE")
+" hi! link htmlH1 markdownH1
+hi! link htmlH2 htmlH1
+hi! link htmlH3 htmlH1
+hi! link htmlH4 htmlH1
+hi! link htmlH5 htmlH1
+hi! link htmlH6 htmlH1
 hi! link htmlSpecialChar SpecialChar
 hi! link htmlTag Keyword
 hi! link htmlTagN htmlTag
@@ -662,6 +663,33 @@ hi! link StartifyBracket Delimiter
 hi! link StartifySlash Normal
 hi! link StartifySpecial Comment
 
+" Telescope
+" > nvim-telescope/telescope.nvim
+call s:hi("TelescopeMatching", s:nord8_gui, "", s:nord8_term, "", s:bold, "")
+
+" Gitsigns
+" > lewis6991/gitsigns.nvim
+call s:hi("GitSignsAdd", s:nord14_gui, "", s:nord14_term, "", "", "")
+call s:hi("GitSignsChange", s:nord13_gui, "", s:nord13_term, "", "", "")
+call s:hi("GitSignsDelete", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddNr", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeNr", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteNr", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" call s:hi("GitSignsAddLn", s:nord14_gui, "", s:nord14_term, "", "", "")
+" call s:hi("GitSignsChangeLn", s:nord13_gui, "", s:nord13_term, "", "", "")
+" call s:hi("GitSignsDeleteLn", s:nord11_gui, "", s:nord13_term, "", "", "")
+
+" Whichkey
+" > folke/which-key.nvim
+call s:hi("WhichKey", s:nord8_gui, "", s:nord8_term, "", "", "")
+call s:hi("WhichKeyGroup", s:nord7_gui, "", s:nord7_term, "", "", "")
+call s:hi("WhichKeySeparator", s:nord3_gui_bright, "", s:nord3_term, "", "", "")
+call s:hi("WhichKeyDesc", s:nord4_gui, "", "", "", "", "")
+" call s:hi("WhichKeyFloat", s:nord4_gui, "", "", "", "", "")
+call s:hi("WhichKeyValue", s:nord4_gui, "", "", "", "", "")
+
 "+--- Languages ---+
 " Haskell
 " > neovimhaskell/haskell-vim
@@ -721,6 +749,23 @@ if has('nvim')
   hi! link TSUnderline Underline
   hi! link TSVariable Variable
   hi! link TSVariableBuiltin Keyword
+
+  " php
+  hi! link phpTSConstructor phpClass
+
+  " html
+  hi! link htmlTSProperty htmlArg
+  hi! link htmlTSTag htmlTag
+  hi! link htmlTSTagDelimiter htmlTag
+
+  " css
+  hi! link cssTSProperty cssDefinition
+
+  " vue
+  hi! link vueTSProperty Keyword
+
+  " comment
+  hi! link commentTSConstant Keyword
 endif
 
 " TypeScript
@@ -818,6 +863,12 @@ hi! link VimwikiList markdownListMarker
 " YAML
 " > stephpy/vim-yaml
 call s:hi("yamlKey", s:nord7_gui, "", s:nord7_term, "", "", "")
+
+" NvimTree
+" > kyazdani42/nvim-tree.lua
+hi! link NvimTreeIndentMarker LineNr
+call s:hi("NvimTreeWindowPicker", s:nord8_gui, s:nord3_gui, s:nord8_term, s:nord3_term, s:bold, "")
+call s:hi("NvimTreeOpenedFile", s:nord8_gui, "", s:nord8_term, "", s:bold, "")
 
 "+------------+
 "+ Public API +
